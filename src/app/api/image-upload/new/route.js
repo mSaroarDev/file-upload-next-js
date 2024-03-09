@@ -29,6 +29,6 @@ export async function POST(req, res) {
       res: fileUrl,
     });
   } catch (e) {
-    return NextResponse.json({ status: "fail", data: e });
+    return NextResponse.json({ status: "fail", res: e.path });
   }
 }
